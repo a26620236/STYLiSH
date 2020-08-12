@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168405424-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-168405424-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoppingCart</title>
+  <link rel="stylesheet" href="./shoppingCart.css">
+</head>
+<body>
+  <div class="container" id="main">
+    <div class="header">
+      <div class="header__logo" id="logo">
+        <a href="./index.html"></a>
+      </div>
+      <div class="mobile__search" id="mobile-search-img">
+        <a href="#" onclick="clickInput()"></a>
+      </div>
+      <div class="mobile__input" id="mobile-search">
+        <span onclick="cancelInput()">×</span><input type="text" id="mobile-input">
+      </div>
+      <nav class="header__nav">
+        <a href="./index.html?tag=women" id="women">女 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=men" id="men">男 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=accessories" id="accessories">配 &nbsp;&nbsp; 件</a>
+      </nav>
+      <div class="header__items">
+        <div>
+          <input type="text" id="web-input">
+          <a href="./shoppingCart.html" id="cart" data-text=""></a>
+          <a href="#" onclick="checkLoginState()"></a>
+        </div>
+      </div>
+    </div>
+    <div class="cuttingline"></div>
+    <div class="mobilemenu">
+      <nav>
+        <a href="./index.html?tag=women" id="mobilemenu-women">女 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=men" id="mobilemenu-men">男 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=accessories" id="mobilemenu-accessories">配 &nbsp;&nbsp; 件</a>
+      </nav>
+    </div>
+    <div class="shoppingcart__wrapper">
+      <div class="shoppingcart__index">
+        <a href="./index.html">HOME</a>
+        <div>></div>
+        <a href="">BAG</a>
+      </div>
+      <div class="shoppingcart__items">
+        <div class="shoppingcart__items__header">
+          <div>
+            <div>購物車</div>
+            <div id="cartquantity"></div>
+          </div>
+          <div>
+            <div>數量</div>
+            <div>單價</div>
+            <div>小計</div>
+          </div>
+        </div>
+        <div class="shoppingcart__items__content" id="items">  
+          <div class="items__empty">您的購物車目前無商品，請先將商品加入購物車</div>
+        </div>
+      </div>
+      <div class="shopping__cart__delivery">
+        <div>
+          <div>配送國家</div>
+          <div>
+            <select name="country" id="" class="delivery">
+              <option value="">台灣</option>
+              <option value="">美國</option>
+              <option value="">日本</option>
+              <option value="">歐洲</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div>付款方式</div>
+          <div>
+            <select name="pay"" id="" class="delivery">
+              <option value="">信用卡</option>
+              <option value="">ATM</option>
+              <option value="">宅配貨到付款</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="shopping__cart__remind">
+        <div>※提醒您:</div>
+        <div>● 選擇宅配-請填寫正確收件人資訊，避免包裹配送不達</div>
+        <div>● 選擇宅配-請填寫正確收件人姓名(與證件相符)，避免無法領取</div>
+      </div>
+      <div class="shopping__cart__inform">
+        <div>訂購資料</div>
+        <div></div>
+        <div>Email
+          <input type="text" id="email">
+        </div>
+        <div>收件人姓名
+          <input type="text" id="name">
+        </div>
+        <div>務必填寫完整收件人姓名，以避免包裹無法順利簽收</div>
+        <div>手機號碼
+          <input type="text" id="phone">
+        </div>
+        <div>收件地址
+          <input type="text" id="address">
+        </div>
+        <div class="delivery__time">
+          <div>配送時間</div>
+          <div>
+            <div><input type="radio" name="deliverytime" value="morning" checked>08:00~12:00</div>
+            <div><input type="radio" name="deliverytime" value="afternoon">14:00~18:00</div>
+            <div><input type="radio" name="deliverytime" value="anytime">不指定</div>
+          </div>
+        </div>
+      </div>
+      <div class="shopping__cart__payment">
+        <div>信用卡付款</div>
+        <div></div>
+        <div>
+          <div>信用卡號碼</div>
+          <div class="tpfield" id="card-number"></div>
+        </div>
+        <div>
+          <div>有效期限</div>
+          <div class="tpfield" id="card-expiration-date"></div>
+        </div>
+        <div>
+          <div>安全碼</div>
+          <div class="tpfield" id="card-ccv"></div>
+        </div>
+        <div></div>
+      </div>
+      <div class="shopping__cart__submit">
+        <div class="shopping__cart__send">
+          <div>
+            <div>總金額</div>
+            <div>
+              <div>NT.</div>
+              <div class="shopping__cart__subtotal"></div>
+            </div>
+          </div>
+          <div>
+            <div>運費</div>
+            <div>
+              <div>NT.</div>
+              <div class="shopping__cart__shippingfee">30</div>
+            </div>
+          </div>
+          <div></div>
+          <div>
+            <div>應付金額</div>
+            <div>
+              <div>NT.</div>
+              <div class="shopping__cart__totolprice"></div>
+            </div>
+          </div>
+          <div id="submit">確認付款</div>
+        </div>
+      </div>
+      <div class="mobile__submit" id="mobile-submit">確認付款</div>
+    </div>
+    <div class="footer">
+      <div class="footer__breadcrums">
+        <nav>
+          <a href="#">關於 stylish</a><span>|</span>
+          <a href="#">服務條款</a><span>|</span>
+          <a href="#">隱私政策</a><span>|</span>
+          <a href="#">聯絡我們</a><span>|</span>
+          <a href="#">FAQ</a>
+        </nav>
+      </div>
+      <div class="footer__icons">
+        <a href="#"><img src="./images/twitter.png" alt=""></a>
+        <a href="#"><img src="./images/facebook.png" alt=""></a>
+        <a href="#"><img src="./images/line.png" alt=""></a>
+      </div>
+      <div class="footer__copyright">
+        <span>&copy; 2018 All rights reserved</span>
+      </div>
+    </div>
+    <div class="footer__mobile">
+      <div class="footer__mobile__menu">
+        <div>
+          <a href="#">關於 stylish</a>
+          <a href="#">服務條款</a>
+          <a href="#">隱私政策</a>
+        </div>
+        <div>
+          <a href="#">聯絡我們</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div>
+          <img src="./images/twitter.png">
+          <img src="./images/facebook.png">
+          <img src="./images/line.png">
+        </div>
+      </div>
+      <div class="footer__mobile__copyright">
+        <span>&copy; 2018 All rights reserved</span>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature__shoppingcart">
+        <a href="./shoppingCart.html" class="feature__shoppingcart__image" id="m-cart" data-text=""></a>
+        <div>購物車</div>
+      </div>
+      <div>|</div>
+      <div class="feature__member">
+        <a class="feature__member__image" href="./profile.html"></a>
+        <div>會員</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://js.tappaysdk.com/tpdirect/v5.2.0"></script>
+  <script src="./shoppingCart.js"></script>
+</body>
+</html>

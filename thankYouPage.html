@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168405424-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-168405424-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThankYouPage</title>
+  <link rel="stylesheet" href="./thankYouPage.css">
+</head>
+<body>
+  <div class="container" id="main">
+    <div class="header">
+      <div class="header__logo" id="logo">
+        <a href="./index.html"></a>
+      </div>
+      <div class="mobile__search" id="mobile-search-img">
+        <a href="#" onclick="clickInput()"></a>
+      </div>
+      <div class="mobile__input" id="mobile-search">
+        <span onclick="cancelInput()">×</span><input type="text" id="mobile-input">
+      </div>
+      <nav class="header__nav">
+        <a href="./index.html?tag=women" id="women">女 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=men" id="men">男 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=accessories" id="accessories">配 &nbsp;&nbsp; 件</a>
+      </nav>
+      <div class="header__items">
+        <div>
+          <input type="text" id="web-input">
+          <a href="./shoppingCart.html" id="cart" data-text=""></a>
+          <a href="#" onclick="checkLoginState()"></a>
+        </div>
+      </div>
+    </div>
+    <div class="cuttingline"></div>
+    <div class="mobilemenu">
+      <nav>
+        <a href="./index.html?tag=women" id="mobilemenu-women">女 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=men" id="mobilemenu-men">男 &nbsp;&nbsp; 裝</a><span>|</span>
+        <a href="./index.html?tag=accessories" id="mobilemenu-accessories">配 &nbsp;&nbsp; 件</a>
+      </nav>
+    </div>
+    <div class="content">
+      <div>
+        <div>感謝您的購買，我們會盡快將商品送達！</div>
+        <div></div>
+        <div>請記住以下訂單編號，以便查詢</div>
+        <div id="shippingId"></div>
+        <div><a href="./index.html">繼續購物</a></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__breadcrums">
+        <nav>
+          <a href="#">關於 stylish</a><span>|</span>
+          <a href="#">服務條款</a><span>|</span>
+          <a href="#">隱私政策</a><span>|</span>
+          <a href="#">聯絡我們</a><span>|</span>
+          <a href="#">FAQ</a>
+        </nav>
+      </div>
+      <div class="footer__icons">
+        <a href="#"><img src="./images/twitter.png" alt=""></a>
+        <a href="#"><img src="./images/facebook.png" alt=""></a>
+        <a href="#"><img src="./images/line.png" alt=""></a>
+      </div>
+      <div class="footer__copyright">
+        <span>&copy; 2018 All rights reserved</span>
+      </div>
+    </div>
+    <div class="footer__mobile">
+      <div class="footer__mobile__menu">
+        <div>
+          <a href="#">關於 stylish</a>
+          <a href="#">服務條款</a>
+          <a href="#">隱私政策</a>
+        </div>
+        <div>
+          <a href="#">聯絡我們</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div>
+          <img src="./images/twitter.png">
+          <img src="./images/facebook.png">
+          <img src="./images/line.png">
+        </div>
+      </div>
+      <div class="footer__mobile__copyright">
+        <span>&copy; 2018 All rights reserved</span>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature__shoppingcart">
+        <a href="./shoppingCart.html" class="feature__shoppingcart__image" id="m-cart" data-text=""></a>
+        <div>購物車</div>
+      </div>
+      <div>|</div>
+      <div class="feature__member">
+        <a class="feature__member__image" href="./profile.html"></a>
+        <div>會員</div>
+      </div>
+    </div>
+  </div>
+  <script src="./thankYouPage.js"></script>
+</body>
+</html>
