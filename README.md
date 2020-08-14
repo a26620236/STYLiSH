@@ -12,15 +12,13 @@ https://a26620236.github.io/STYLiSH/
 - Backend API by AJAX
 ## Website Demo
 ### Banner Campaign Slide feature and Infinite scroll Paging
-![](https://i.imgur.com/YudSi2t.gif)
-
+![](https://i.imgur.com/T9cy7hz.gif)
 
 ### Choose Size and Color of Product and add to Cart
 ![](https://i.imgur.com/qtdSDwo.gif)
 
-
 ### Checkout Feature
-![](https://i.imgur.com/dfGwQtD.gif)
+![](https://i.imgur.com/1qQcFjs.gif)
 
 ## Contact
 E-mail: a26620236@gmail.com
