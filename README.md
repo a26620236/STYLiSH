@@ -12,7 +12,7 @@ https://a26620236.github.io/STYLiSH/
 - Backend API by AJAX
 ## Website Demo
 ### Banner Campaign Slide feature and Infinite scroll Paging
-![](https://i.imgur.com/T9cy7hz.gif)
+![](https://i.imgur.com/lqevcxP.gif)
 
 ### Choose Size and Color of Product and add to Cart
 ![](https://i.imgur.com/qtdSDwo.gif)
