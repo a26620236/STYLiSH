@@ -16,7 +16,7 @@ https://a26620236.github.io/STYLiSH/
 
 
 ### Choose Size and Color of Product and add to Cart
-![](https://i.imgur.com/zS6M8GX.gif)
+![](https://i.imgur.com/qtdSDwo.gif)
 
 
 ### Checkout Feature
