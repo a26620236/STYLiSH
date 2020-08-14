@@ -1,7 +1,7 @@
 # STYLiSH
 An E-commerce shopping website including catelog with infinite scroll, shopping cart module, and third-party payment  
 
-![](https://i.imgur.com/VIMhLy6.png)
+![](https://i.imgur.com/rldX8dI.png)
 ## Demo
 https://a26620236.github.io/STYLiSH/
 - HTML / CSS
